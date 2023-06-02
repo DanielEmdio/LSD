@@ -1,0 +1,67 @@
+# Reading pref.tcl
+# do TesteDemo_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/Counter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:13:13 on May 13,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/Counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Counter
+# -- Compiling architecture Behavioral of Counter
+# End time: 09:13:13 on May 13,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vcom -reportprogress 300 -work work C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/Counter.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:13:37 on May 13,2022
+# vcom -reportprogress 300 -work work C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/Counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Counter
+# -- Compiling architecture Behavioral of Counter
+# End time: 09:13:37 on May 13,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/Counter_Tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:13:37 on May 13,2022
+# vcom -reportprogress 300 -work work C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/Counter_Tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Counter_Tb
+# -- Compiling architecture Stimulus of Counter_Tb
+# -- Loading package NUMERIC_STD
+# -- Loading entity Counter
+# End time: 09:13:37 on May 13,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.counter_tb
+# vsim work.counter_tb 
+# Start time: 09:13:48 on May 13,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.counter_tb(stimulus)
+# Loading work.counter(behavioral)
+add wave -position end  sim:/counter_tb/s_reset
+add wave -position end  sim:/counter_tb/s_clk
+add wave -position end  sim:/counter_tb/s_enable
+add wave -position end  sim:/counter_tb/s_cntOut
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/simulation/modelsim/wave.do
+# End time: 09:14:52 on May 13,2022, Elapsed time: 0:01:04
+# Errors: 0, Warnings: 0

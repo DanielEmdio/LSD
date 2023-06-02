@@ -1,0 +1,21 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity GameSetTest is
+	port(reset  : in  std_logic;
+		  clk    : in  std_logic;
+		  dIn1   : in  std_logic;
+		  dIn2   : in  std_logic;
+		  game_Pt: out std_logic;
+		  dOut1  : out std_logic_vector(2 downto 0);
+		  dOut2  : out std_logic_vector(2 downto 0);
+		  set1   : out std_logic;
+		  set2   : out std_logic);
+end GameSetTest;
+
+architecture Teste of GameSetTest is
+
+begin
+	
+end Teste;

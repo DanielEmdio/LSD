@@ -1,0 +1,313 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/simulation/modelsim
+Edebounceunit
+Z1 w1654700423
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 4
+R0
+Z5 8C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/DebounceUnit.vhd
+Z6 FC:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/DebounceUnit.vhd
+l0
+L5 1
+VM=jN=GelKZOXzU8oak0F:0
+!s100 na;Z7ZN2R;o?h[>f1ToBd0
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1655221421
+!i10b 1
+Z9 !s108 1655221421.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/DebounceUnit.vhd|
+Z11 !s107 C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/DebounceUnit.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+Z14 DEx4 work 12 debounceunit 0 22 M=jN=GelKZOXzU8oak0F:0
+!i122 4
+l23
+L16 48
+Vgj^]2R1HXKCczn>8JemoK3
+!s100 CU_NaGb^??_L]<b=ozGbY1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Egame
+Z15 w1655212894
+R2
+R3
+R4
+!i122 0
+R0
+Z16 8C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/Game.vhd
+Z17 FC:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/Game.vhd
+l0
+L5 1
+VW;Q`689dbI6GmXH9>KiMC1
+!s100 A[gfdW51g0^akPgNXNg;;0
+R7
+31
+R8
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/Game.vhd|
+Z19 !s107 C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/Game.vhd|
+!i113 1
+R12
+R13
+Abehav
+R2
+R3
+R4
+Z20 DEx4 work 4 game 0 22 W;Q`689dbI6GmXH9>KiMC1
+!i122 0
+l23
+L17 116
+VD@C;TNdY5MJnH0iX=mocl0
+!s100 ^B?CTYIDlJ9Jh1gQXm2G03
+R7
+31
+R8
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+R13
+Egameset_tb
+Z21 w1655221396
+R3
+R4
+!i122 7
+R0
+Z22 8C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/GameSet_Tb.vhd
+Z23 FC:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/GameSet_Tb.vhd
+l0
+L4 1
+VI?=7@YdePGiVi1nR4dJiW3
+!s100 Z8zb3??:]C`VZP^e=WOWN3
+R7
+32
+Z24 !s110 1655221433
+!i10b 1
+Z25 !s108 1655221433.000000
+Z26 !s90 -reportprogress|300|-work|work|C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/GameSet_Tb.vhd|
+!s107 C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/GameSet_Tb.vhd|
+!i113 1
+Z27 o-work work
+R13
+Asimulation
+R2
+Z28 DEx4 work 11 gamesettest 0 22 GY@n:ZO^I_Na0PgcbXfKP2
+R3
+R4
+DEx4 work 10 gameset_tb 0 22 I?=7@YdePGiVi1nR4dJiW3
+!i122 7
+l16
+L7 71
+VFQ^_[5@OYZaiR7izA7Jjf3
+!s100 lTgSAW77c;[ldGeWCkg[l3
+R7
+32
+R24
+!i10b 1
+R25
+R26
+Z29 !s107 C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/GameSet_Tb.vhd|
+!i113 1
+R27
+R13
+Egamesettest
+Z30 w1655203756
+R2
+R3
+R4
+!i122 6
+R0
+Z31 8C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/GameSetTest.vhd
+Z32 FC:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/GameSetTest.vhd
+l0
+L5 1
+VGY@n:ZO^I_Na0PgcbXfKP2
+!s100 jzgkzgI5UBE26OIKVz2k70
+R7
+32
+Z33 !s110 1655221432
+!i10b 1
+Z34 !s108 1655221432.000000
+Z35 !s90 -reportprogress|300|-work|work|C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/GameSetTest.vhd|
+Z36 !s107 C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/GameSetTest.vhd|
+!i113 1
+R27
+R13
+Ateste
+Z37 DEx4 work 6 hexset 0 22 HdR>bU@2dMKT4GIg45SPG2
+Z38 DEx4 work 7 hexgame 0 22 A;=mAhDbYoNn[BbfiKJbh3
+R14
+Z39 DEx4 work 3 set 0 22 FDjR@>@;QBh9=beJ4OQ:k3
+R20
+R2
+R3
+R4
+R28
+!i122 6
+l22
+L18 62
+V2_a9Y?Yhfe0`iMm2VeZz:2
+!s100 gOk;KUel<^GaQNaRY0i^=1
+R7
+32
+R33
+!i10b 1
+R34
+R35
+R36
+!i113 1
+R27
+R13
+Ehexgame
+Z40 w1654699104
+R3
+R4
+!i122 2
+R0
+Z41 8C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/HexGames.vhd
+Z42 FC:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/HexGames.vhd
+l0
+L4 1
+VA;=mAhDbYoNn[BbfiKJbh3
+!s100 b?gS^HIg3147fz0bm]e8d3
+R7
+31
+R8
+!i10b 1
+R9
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/HexGames.vhd|
+Z44 !s107 C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/HexGames.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+R38
+!i122 2
+l11
+L10 25
+V@1?X7WEa`93XTMJV=Mg6I2
+!s100 NXm5e<m<@@RnVZmM>j?]b2
+R7
+31
+R8
+!i10b 1
+R9
+R43
+R44
+!i113 1
+R12
+R13
+Ehexset
+Z45 w1654604457
+R3
+R4
+!i122 3
+R0
+Z46 8C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/HexSet.vhd
+Z47 FC:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/HexSet.vhd
+l0
+L4 1
+VHdR>bU@2dMKT4GIg45SPG2
+!s100 ?dHZzncWkWITG890MZ>7>1
+R7
+31
+R8
+!i10b 1
+R9
+Z48 !s90 -reportprogress|300|-93|-work|work|C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/HexSet.vhd|
+Z49 !s107 C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/HexSet.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+R37
+!i122 3
+l10
+L9 11
+VmiB97QUBEbnHCN>HT`<nj1
+!s100 5_EMSzKG>FAo6BO]ehK:71
+R7
+31
+R8
+!i10b 1
+R9
+R48
+R49
+!i113 1
+R12
+R13
+Eset
+Z50 w1655195728
+R2
+R3
+R4
+!i122 1
+R0
+Z51 8C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/Set.vhd
+Z52 FC:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/Set.vhd
+l0
+L5 1
+VFDjR@>@;QBh9=beJ4OQ:k3
+!s100 X?`Qa7HToklV]Hb9@JFSa1
+R7
+31
+R8
+!i10b 1
+R9
+Z53 !s90 -reportprogress|300|-93|-work|work|C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/Set.vhd|
+Z54 !s107 C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/Set.vhd|
+!i113 1
+R12
+R13
+Abehav
+R2
+R3
+R4
+R39
+!i122 1
+l23
+L18 78
+V]d?8QFP:2BB^i1aZ7jXZV1
+!s100 V0a_2SYOQ7BCZVLhaBk7O3
+R7
+31
+R8
+!i10b 1
+R9
+R53
+R54
+!i113 1
+R12
+R13

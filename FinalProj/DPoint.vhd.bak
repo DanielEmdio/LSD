@@ -1,0 +1,17 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity DPoint is
+	port(setPt   : in  std_logic;
+		  matchPt : in  std_logic;
+		  decOut_n : out std_logic_vector(6 downto 0));
+end DPoint;
+
+architecture Behavioral of DPoint is
+begin
+	if(matchPt = '1')then
+		decOut_n <= "1000001";
+	elsif(setPt = '1')then
+		decOut_n <= "0010010";
+	end if;
+end Behavioral;

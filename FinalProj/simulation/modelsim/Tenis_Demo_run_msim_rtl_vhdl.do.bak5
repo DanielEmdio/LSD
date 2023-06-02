@@ -1,0 +1,15 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/Game.vhd}
+vcom -93 -work work {C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/Set.vhd}
+vcom -93 -work work {C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/HexGames.vhd}
+vcom -93 -work work {C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/Match.vhd}
+vcom -93 -work work {C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/Buff.vhd}
+vcom -93 -work work {C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/HexSet.vhd}
+vcom -93 -work work {C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/DebounceUnit.vhd}
+

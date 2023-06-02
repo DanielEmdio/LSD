@@ -1,0 +1,233 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'Match:match|win1'
+Slack : -11.786
+TNS   : -191.031
+
+Type  : Slow 1200mV 85C Model Setup 'Set:set|PS'
+Slack : -10.649
+TNS   : -148.110
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -7.137
+TNS   : -721.112
+
+Type  : Slow 1200mV 85C Model Setup 'Game:Game|PS.S'
+Slack : -6.791
+TNS   : -18.099
+
+Type  : Slow 1200mV 85C Model Setup 'PulseGeneratorCounter:puls|pulse'
+Slack : -5.038
+TNS   : -10.030
+
+Type  : Slow 1200mV 85C Model Hold 'Set:set|PS'
+Slack : -0.521
+TNS   : -3.207
+
+Type  : Slow 1200mV 85C Model Hold 'Match:match|win1'
+Slack : -0.057
+TNS   : -0.057
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'PulseGeneratorCounter:puls|pulse'
+Slack : 1.165
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Game:Game|PS.S'
+Slack : 1.237
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'Match:match|win1'
+Slack : -6.925
+TNS   : -138.151
+
+Type  : Slow 1200mV 85C Model Recovery 'CLOCK_50'
+Slack : -5.948
+TNS   : -212.663
+
+Type  : Slow 1200mV 85C Model Removal 'Match:match|win1'
+Slack : 0.800
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'CLOCK_50'
+Slack : 1.501
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -265.140
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'PulseGeneratorCounter:puls|pulse'
+Slack : -1.285
+TNS   : -2.570
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Match:match|win1'
+Slack : 0.390
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Set:set|PS'
+Slack : 0.395
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Game:Game|PS.S'
+Slack : 0.418
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'Match:match|win1'
+Slack : -10.559
+TNS   : -173.379
+
+Type  : Slow 1200mV 0C Model Setup 'Set:set|PS'
+Slack : -9.643
+TNS   : -136.143
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -6.473
+TNS   : -644.450
+
+Type  : Slow 1200mV 0C Model Setup 'Game:Game|PS.S'
+Slack : -6.382
+TNS   : -17.012
+
+Type  : Slow 1200mV 0C Model Setup 'PulseGeneratorCounter:puls|pulse'
+Slack : -4.730
+TNS   : -9.435
+
+Type  : Slow 1200mV 0C Model Hold 'Set:set|PS'
+Slack : -0.358
+TNS   : -1.666
+
+Type  : Slow 1200mV 0C Model Hold 'Match:match|win1'
+Slack : -0.043
+TNS   : -0.043
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.350
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'PulseGeneratorCounter:puls|pulse'
+Slack : 1.063
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Game:Game|PS.S'
+Slack : 1.202
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'Match:match|win1'
+Slack : -6.532
+TNS   : -130.537
+
+Type  : Slow 1200mV 0C Model Recovery 'CLOCK_50'
+Slack : -5.554
+TNS   : -192.566
+
+Type  : Slow 1200mV 0C Model Removal 'Match:match|win1'
+Slack : 0.874
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'CLOCK_50'
+Slack : 1.323
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -265.140
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'PulseGeneratorCounter:puls|pulse'
+Slack : -1.285
+TNS   : -2.570
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Match:match|win1'
+Slack : 0.375
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Set:set|PS'
+Slack : 0.399
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Game:Game|PS.S'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Match:match|win1'
+Slack : -5.460
+TNS   : -93.117
+
+Type  : Fast 1200mV 0C Model Setup 'Set:set|PS'
+Slack : -4.777
+TNS   : -64.155
+
+Type  : Fast 1200mV 0C Model Setup 'Game:Game|PS.S'
+Slack : -3.334
+TNS   : -7.964
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -3.038
+TNS   : -243.510
+
+Type  : Fast 1200mV 0C Model Setup 'PulseGeneratorCounter:puls|pulse'
+Slack : -2.370
+TNS   : -4.711
+
+Type  : Fast 1200mV 0C Model Hold 'Set:set|PS'
+Slack : -0.047
+TNS   : -0.070
+
+Type  : Fast 1200mV 0C Model Hold 'Match:match|win1'
+Slack : -0.044
+TNS   : -0.044
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.158
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'PulseGeneratorCounter:puls|pulse'
+Slack : 0.461
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Game:Game|PS.S'
+Slack : 0.640
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'Match:match|win1'
+Slack : -3.802
+TNS   : -75.495
+
+Type  : Fast 1200mV 0C Model Recovery 'CLOCK_50'
+Slack : -2.537
+TNS   : -76.892
+
+Type  : Fast 1200mV 0C Model Removal 'Match:match|win1'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CLOCK_50'
+Slack : 0.593
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -219.944
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PulseGeneratorCounter:puls|pulse'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Match:match|win1'
+Slack : 0.263
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Set:set|PS'
+Slack : 0.271
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Game:Game|PS.S'
+Slack : 0.315
+TNS   : 0.000
+
+------------------------------------------------------------

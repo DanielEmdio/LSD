@@ -1,0 +1,1344 @@
+# Reading pref.tcl
+# do Tenis_Demo_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/Game.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:43:41 on Jun 14,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/Game.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Game
+# -- Compiling architecture Behav of Game
+# End time: 15:43:41 on Jun 14,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/Set.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:43:41 on Jun 14,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/Set.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Set
+# -- Compiling architecture Behav of Set
+# End time: 15:43:41 on Jun 14,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/HexGames.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:43:41 on Jun 14,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/HexGames.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity HexGame
+# -- Compiling architecture Behavioral of HexGame
+# End time: 15:43:41 on Jun 14,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/HexSet.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:43:41 on Jun 14,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/HexSet.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity HexSet
+# -- Compiling architecture Behavioral of HexSet
+# End time: 15:43:41 on Jun 14,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/DebounceUnit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:43:41 on Jun 14,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/DebounceUnit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DebounceUnit
+# -- Compiling architecture Behavioral of DebounceUnit
+# End time: 15:43:41 on Jun 14,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/GameSetTest.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:43:41 on Jun 14,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/GameSetTest.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity GameSetTest
+# -- Compiling architecture Teste of GameSetTest
+# -- Loading entity Game
+# -- Loading entity Set
+# -- Loading entity DebounceUnit
+# -- Loading entity HexGame
+# -- Loading entity HexSet
+# End time: 15:43:42 on Jun 14,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vcom -reportprogress 300 -work work C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/GameSetTest.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:43:52 on Jun 14,2022
+# vcom -reportprogress 300 -work work C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/GameSetTest.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity GameSetTest
+# -- Compiling architecture Teste of GameSetTest
+# -- Loading entity Game
+# -- Loading entity Set
+# -- Loading entity DebounceUnit
+# -- Loading entity HexGame
+# -- Loading entity HexSet
+# End time: 15:43:52 on Jun 14,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/GameSet_Tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:43:53 on Jun 14,2022
+# vcom -reportprogress 300 -work work C:/Users/danie/Disciplinas/2semestre/LSD/FinalProj/GameSet_Tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity GameSet_Tb
+# -- Compiling architecture Simulation of GameSet_Tb
+# -- Loading package NUMERIC_STD
+# -- Loading entity GameSetTest
+# End time: 15:43:53 on Jun 14,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.gameset_tb(simulation)
+# vsim work.gameset_tb(simulation) 
+# Start time: 15:43:57 on Jun 14,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.gameset_tb(simulation)
+# Loading work.gamesettest(teste)
+# Loading work.game(behav)
+# Loading work.set(behav)
+# Loading work.debounceunit(behavioral)
+# Loading work.hexgame(behavioral)
+# Loading work.hexset(behavioral)
+add wave -position end  sim:/gameset_tb/s_clk
+add wave -position end  sim:/gameset_tb/s_enable
+add wave -position end  sim:/gameset_tb/s_gamePt
+add wave -position end  sim:/gameset_tb/s_set_Pt
+add wave -position end  sim:/gameset_tb/s_dOut1
+add wave -position end  sim:/gameset_tb/s_dOut2
+add wave -position end  sim:/gameset_tb/s_key
+add wave -position end  sim:/gameset_tb/s_set
+add wave -position end  sim:/gameset_tb/uut/s_game1
+add wave -position end  sim:/gameset_tb/uut/s_game2
+run
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 100 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 100 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 300 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 300 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 300 ns  Iteration: 3  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 300 ns  Iteration: 3  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 300 ns  Iteration: 3  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 300 ns  Iteration: 3  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 300 ns  Iteration: 3  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 300 ns  Iteration: 3  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 300 ns  Iteration: 3  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 500 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 500 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 700 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 700 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 900 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 900 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1100 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1100 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1300 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1300 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1500 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1500 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1700 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1700 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1900 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 1900 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2100 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2100 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2300 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2300 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2500 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2500 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2700 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2700 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2900 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 2900 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3100 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3100 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3300 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3300 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3500 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3500 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3700 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3700 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3900 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 3900 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+add wave -position end  sim:/gameset_tb/s_hex7
+add wave -position end  sim:/gameset_tb/s_hex6
+add wave -position end  sim:/gameset_tb/s_hex5
+add wave -position end  sim:/gameset_tb/s_hex4
+add wave -position end  sim:/gameset_tb/s_hex1
+add wave -position end  sim:/gameset_tb/s_hex0
+run
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4100 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4100 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4300 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4300 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4500 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4500 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4700 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4700 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4900 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 4900 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5100 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5100 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5300 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5300 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5500 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5500 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5700 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5700 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5900 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 5900 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6100 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6100 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6300 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6300 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6500 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6500 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6700 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6700 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6900 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 6900 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7100 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7100 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7200 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7200 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7300 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7300 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7400 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7400 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7500 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7500 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7600 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7600 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7700 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7700 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7800 ns  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7800 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7900 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 7900 ns  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8 us  Iteration: 1  Instance: /gameset_tb/uut/Game
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 8 us  Iteration: 1  Instance: /gameset_tb/uut/Set
+# End time: 15:47:05 on Jun 14,2022, Elapsed time: 0:03:08
+# Errors: 0, Warnings: 596

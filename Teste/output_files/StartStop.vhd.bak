@@ -1,0 +1,20 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity StartStop is
+	port(Start : in std_logic;
+		  Stop  : out std_logic);
+end StartStop;
+
+architecture Behavioral of StartStop is
+begin;
+	process(Start)
+		if(falling_edge(Start)) then
+			if(Stop = '1')
+				Stop <= '0';
+			else
+				Stop <= '1';
+			end if;
+		end if;
+	end process;
+end Behavioral;

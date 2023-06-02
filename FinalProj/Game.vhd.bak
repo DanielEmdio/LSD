@@ -1,0 +1,80 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity Game is
+	port(reset : in  std_logic;
+		  clk   : in  std_logic;
+		  dIn1  : in  std_logic;
+		  dIn2  : in  std_logic;
+		  dOut1 : out std_logic_vector(1 downto 0);
+		  dOut2 : out std_logic_vector(1 downto 0));
+end Game;
+
+architecture Behav of Game is
+	type state is (S, D, A1, A2);
+	signal PS, NS : state;
+	signal s_c1, s_c2: unsigned(1 downto 0);
+begin
+
+	sync_proc: process(clk)
+	begin
+		if (rising_edge(clk)) then
+			if (reset = '1') then
+				PS <= S;
+			else
+				PS <= NS;
+			end if;
+		end if;
+	end process;
+	
+	
+	comb_proc: process(PS, dIn1, dIn2)
+	begin
+		NS <= PS;
+		
+		case PS is
+		when S => 
+			if (dIn1 = '1') then
+				s_c1 <= s_c1 + 1;
+			elsif (dIn2 = '1') then
+				s_c2 <= s_c2 + 1;
+			end if;
+			
+			NS <= S;
+			if (s_c1 ="11" and s_c2 = "11") then
+				NS <= D;
+			end if;
+			
+		when D =>
+			if (dIn1 = '1') then
+				NS <= A1;
+			elsif(dIn2 = '1') then
+				NS <= A2;
+			end if;
+		
+		when A1 =>
+			NS <= D;
+			if (dIn1 = '1') then
+				s_c1 <= "00";
+				s_c2 <= "00";
+				NS <= S;
+			elsif (dIn2 = '1') then
+				NS <= D;
+			end if;
+		
+		when A2 =>
+			if (dIn2 = '1') then
+				s_c1 <= "00";
+				s_c2 <= "00";
+				NS <= S;
+			elsif (dIn1 = '1') then
+				NS <= D;
+			end if;
+		
+		end case;
+		dOut1 <= std_logic_vector(s_c1);
+		dOut2 <= std_logic_vector(s_c2);
+	end process;
+	
+end Behav;

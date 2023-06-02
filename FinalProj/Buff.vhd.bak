@@ -1,0 +1,20 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Buff is
+	port ( input : in STD_LOGIC_vector(2 downto 0);
+			 enable: in STD_Logic;
+		    output : out STD_LOGIC_vector(2 downto 0));
+end Buff;
+
+architecture Behavioral of Buff is
+begin
+	process(enable)
+	begin
+		if(enable = '1') then
+			output <= input;
+		else
+			output <= "000";
+		end if;
+	end process;
+end Behavioral;

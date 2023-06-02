@@ -1,0 +1,54 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity Match_Tb is
+end Match_Tb;
+
+architecture Simulation of Match_Tb is
+	signal s_set1, s_set2, s_enable, s_reset : std_logic;
+	
+	signal s_match_Pt : std_logic;
+	signal s_dOut1, s_dOut2: std_logic_vector(2 downto 0);	
+begin
+	uut: entity work.Match(Set)
+		  port map(reset    => s_reset,
+					  enable   => s_enable,
+				     set1     => s_set1,
+				     set2     => s_set2,
+					  match_Pt => s_match_Pt,
+				     dOut1    => s_dOut1,
+				     dOut2    => s_dOut2);
+	 
+	stim_proc: process
+	begin
+		s_reset  <= '1';
+		s_enable <= '1';
+		s_set1   <= '0';
+		s_set2   <= '0';
+		wait for 50 ns;
+		
+		s_reset <= '0';
+		s_set1  <= '1';
+		wait for 50 ns;		--100 ns
+		
+		s_set1 <= '0';
+		s_set2 <= '1';
+		wait for 50 ns;
+		
+		s_set1 <= '1';
+		s_set2 <= '0';
+		wait for 50 ns;		-- 200 ns
+		
+		s_set1 <= '0';
+		s_set2 <= '0';
+		wait for 50 ns;
+		
+		s_set1 <= '1';
+		s_set2 <= '0';
+		wait for 50 ns;		-- 300 ns
+		
+		
+		
+		
+	end process;
+end Simulation;

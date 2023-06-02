@@ -1,0 +1,481 @@
+Analysis & Synthesis report for TesteDemo
+Fri May 13 10:21:23 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: PulseGeneratorCounter:Pulse
+ 12. Parameter Settings for Inferred Entity Instance: bin2bcd:BCD|lpm_divide:Mod0
+ 13. Parameter Settings for Inferred Entity Instance: bin2bcd:BCD|lpm_divide:Div0
+ 14. Port Connectivity Checks: "Bin7SegDecoder:BIN1"
+ 15. Port Connectivity Checks: "Bin7SegDecoder:BIN0"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri May 13 10:21:23 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; TesteDemo                                   ;
+; Top-level Entity Name              ; TesteDemo                                   ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 224                                         ;
+;     Total combinational functions  ; 224                                         ;
+;     Dedicated logic registers      ; 34                                          ;
+; Total registers                    ; 34                                          ;
+; Total pins                         ; 17                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; TesteDemo          ; TesteDemo          ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; Counter.vhd                      ; yes             ; User VHDL File               ; C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/Counter.vhd                ;         ;
+; PulseGeneratorCounter.vhd        ; yes             ; User VHDL File               ; C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/PulseGeneratorCounter.vhd  ;         ;
+; Bin7SegDecoder.vhd               ; yes             ; User VHDL File               ; C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/Bin7SegDecoder.vhd         ;         ;
+; TesteDemo.vhd                    ; yes             ; User VHDL File               ; C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/TesteDemo.vhd              ;         ;
+; output_files/StartStop.vhd       ; yes             ; User VHDL File               ; C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/output_files/StartStop.vhd ;         ;
+; output_files/bin2bcd.vhd         ; yes             ; User VHDL File               ; C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/output_files/bin2bcd.vhd   ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf              ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc             ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc         ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc              ;         ;
+; db/lpm_divide_q9m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/db/lpm_divide_q9m.tdf      ;         ;
+; db/sign_div_unsign_fkh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/db/sign_div_unsign_fkh.tdf ;         ;
+; db/alt_u_div_i4f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/db/alt_u_div_i4f.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/db/add_sub_8pc.tdf         ;         ;
+; db/lpm_divide_jhm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/db/lpm_divide_jhm.tdf      ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/db/sign_div_unsign_bkh.tdf ;         ;
+; db/alt_u_div_a4f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/db/alt_u_div_a4f.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 224            ;
+;                                             ;                ;
+; Total combinational functions               ; 224            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 68             ;
+;     -- 3 input functions                    ; 44             ;
+;     -- <=2 input functions                  ; 112            ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 156            ;
+;     -- arithmetic mode                      ; 68             ;
+;                                             ;                ;
+; Total registers                             ; 34             ;
+;     -- Dedicated logic registers            ; 34             ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 17             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 33             ;
+; Total fan-out                               ; 706            ;
+; Average fan-out                             ; 2.42           ;
++---------------------------------------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                  ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Entity Name           ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |TesteDemo                                ; 224 (0)             ; 34 (0)                    ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |TesteDemo                                                                                                             ; TesteDemo             ; work         ;
+;    |Bin7SegDecoder:BIN0|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TesteDemo|Bin7SegDecoder:BIN0                                                                                         ; Bin7SegDecoder        ; work         ;
+;    |Bin7SegDecoder:BIN1|                  ; 41 (41)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TesteDemo|Bin7SegDecoder:BIN1                                                                                         ; Bin7SegDecoder        ; work         ;
+;    |Counter:Counter|                      ; 22 (22)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TesteDemo|Counter:Counter                                                                                             ; Counter               ; work         ;
+;    |PulseGeneratorCounter:Pulse|          ; 45 (45)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TesteDemo|PulseGeneratorCounter:Pulse                                                                                 ; PulseGeneratorCounter ; work         ;
+;    |StartStop:Stop|                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TesteDemo|StartStop:Stop                                                                                              ; StartStop             ; work         ;
+;    |bin2bcd:BCD|                          ; 108 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TesteDemo|bin2bcd:BCD                                                                                                 ; bin2bcd               ; work         ;
+;       |lpm_divide:Div0|                   ; 44 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TesteDemo|bin2bcd:BCD|lpm_divide:Div0                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_jhm:auto_generated|  ; 44 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TesteDemo|bin2bcd:BCD|lpm_divide:Div0|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm        ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 44 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TesteDemo|bin2bcd:BCD|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh   ; work         ;
+;                |alt_u_div_a4f:divider|    ; 44 (44)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TesteDemo|bin2bcd:BCD|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f         ; work         ;
+;       |lpm_divide:Mod0|                   ; 64 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TesteDemo|bin2bcd:BCD|lpm_divide:Mod0                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_q9m:auto_generated|  ; 64 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TesteDemo|bin2bcd:BCD|lpm_divide:Mod0|lpm_divide_q9m:auto_generated                                                   ; lpm_divide_q9m        ; work         ;
+;             |sign_div_unsign_fkh:divider| ; 64 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TesteDemo|bin2bcd:BCD|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ; sign_div_unsign_fkh   ; work         ;
+;                |alt_u_div_i4f:divider|    ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TesteDemo|bin2bcd:BCD|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ; alt_u_div_i4f         ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                         ;
++---------------------------------------+------------------------------------+
+; Register name                         ; Reason for Removal                 ;
++---------------------------------------+------------------------------------+
+; StartStop:Stop|Stop                   ; Merged with StartStop:Stop|s_start ;
+; Total Number of Removed Registers = 1 ;                                    ;
++---------------------------------------+------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 34    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |TesteDemo|Counter:Counter|s_count[4]   ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |TesteDemo|Bin7SegDecoder:BIN0|decOut_n ;
+; 64:1               ; 2 bits    ; 84 LEs        ; 44 LEs               ; 40 LEs                 ; No         ; |TesteDemo|Bin7SegDecoder:BIN1|decOut_n ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PulseGeneratorCounter:Pulse ;
++----------------+----------+----------------------------------------------+
+; Parameter Name ; Value    ; Type                                         ;
++----------------+----------+----------------------------------------------+
+; max            ; 25000000 ; Signed Integer                               ;
++----------------+----------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: bin2bcd:BCD|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                            ;
+; LPM_WIDTHD             ; 8              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_q9m ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: bin2bcd:BCD|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                            ;
+; LPM_WIDTHD             ; 4              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "Bin7SegDecoder:BIN1" ;
++--------+-------+----------+---------------------+
+; Port   ; Type  ; Severity ; Details             ;
++--------+-------+----------+---------------------+
+; enable ; Input ; Info     ; Stuck at VCC        ;
++--------+-------+----------+---------------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "Bin7SegDecoder:BIN0" ;
++--------+-------+----------+---------------------+
+; Port   ; Type  ; Severity ; Details             ;
++--------+-------+----------+---------------------+
+; enable ; Input ; Info     ; Stuck at VCC        ;
++--------+-------+----------+---------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 17                          ;
+; cycloneiii_ff         ; 34                          ;
+;     plain             ; 34                          ;
+; cycloneiii_lcell_comb ; 224                         ;
+;     arith             ; 68                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 37                          ;
+;         3 data inputs ; 29                          ;
+;     normal            ; 156                         ;
+;         0 data inputs ; 8                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 62                          ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 68                          ;
+;                       ;                             ;
+; Max LUT depth         ; 13.60                       ;
+; Average LUT depth     ; 8.10                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri May 13 10:21:12 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TesteDemo -c TesteDemo
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
+    Info (12022): Found design unit 1: Counter-Behavioral File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/Counter.vhd Line: 12
+    Info (12023): Found entity 1: Counter File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/Counter.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file pulsegeneratorcounter.vhd
+    Info (12022): Found design unit 1: PulseGeneratorCounter-Behavioral File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/PulseGeneratorCounter.vhd Line: 11
+    Info (12023): Found entity 1: PulseGeneratorCounter File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/PulseGeneratorCounter.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bin7segdecoder.vhd
+    Info (12022): Found design unit 1: Bin7SegDecoder-Behavioral File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/Bin7SegDecoder.vhd Line: 10
+    Info (12023): Found entity 1: Bin7SegDecoder File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/Bin7SegDecoder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file counter_tb.vhd
+    Info (12022): Found design unit 1: Counter_Tb-Stimulus File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/Counter_Tb.vhd Line: 7
+    Info (12023): Found entity 1: Counter_Tb File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/Counter_Tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file testedemo.vhd
+    Info (12022): Found design unit 1: TesteDemo-Behavioral File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/TesteDemo.vhd Line: 12
+    Info (12023): Found entity 1: TesteDemo File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/TesteDemo.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file output_files/startstop.vhd
+    Info (12022): Found design unit 1: StartStop-Behavioral File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/output_files/StartStop.vhd Line: 9
+    Info (12023): Found entity 1: StartStop File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/output_files/StartStop.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file output_files/bin2bcd.vhd
+    Info (12022): Found design unit 1: bin2bcd-Behavioral File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/output_files/bin2bcd.vhd Line: 11
+    Info (12023): Found entity 1: bin2bcd File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/output_files/bin2bcd.vhd Line: 5
+Info (12127): Elaborating entity "TesteDemo" for the top level hierarchy
+Info (12129): Elaborating entity "PulseGeneratorCounter" using architecture "A:behavioral" for hierarchy "PulseGeneratorCounter:Pulse" File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/TesteDemo.vhd Line: 19
+Info (12129): Elaborating entity "StartStop" using architecture "A:behavioral" for hierarchy "StartStop:Stop" File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/TesteDemo.vhd Line: 24
+Info (12129): Elaborating entity "Counter" using architecture "A:behavioral" for hierarchy "Counter:Counter" File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/TesteDemo.vhd Line: 28
+Info (12129): Elaborating entity "bin2bcd" using architecture "A:behavioral" for hierarchy "bin2bcd:BCD" File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/TesteDemo.vhd Line: 34
+Info (12129): Elaborating entity "Bin7SegDecoder" using architecture "A:behavioral" for hierarchy "Bin7SegDecoder:BIN0" File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/TesteDemo.vhd Line: 39
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "bin2bcd:BCD|Mod0" File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/output_files/bin2bcd.vhd Line: 15
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "bin2bcd:BCD|Div0" File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/output_files/bin2bcd.vhd Line: 16
+Info (12130): Elaborated megafunction instantiation "bin2bcd:BCD|lpm_divide:Mod0" File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/output_files/bin2bcd.vhd Line: 15
+Info (12133): Instantiated megafunction "bin2bcd:BCD|lpm_divide:Mod0" with the following parameter: File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/output_files/bin2bcd.vhd Line: 15
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_q9m.tdf
+    Info (12023): Found entity 1: lpm_divide_q9m File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/db/lpm_divide_q9m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_fkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_fkh File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/db/sign_div_unsign_fkh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_i4f.tdf
+    Info (12023): Found entity 1: alt_u_div_i4f File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/db/alt_u_div_i4f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "bin2bcd:BCD|lpm_divide:Div0" File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/output_files/bin2bcd.vhd Line: 16
+Info (12133): Instantiated megafunction "bin2bcd:BCD|lpm_divide:Div0" with the following parameter: File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/output_files/bin2bcd.vhd Line: 16
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_jhm.tdf
+    Info (12023): Found entity 1: lpm_divide_jhm File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/db/lpm_divide_jhm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bkh File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/db/sign_div_unsign_bkh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a4f.tdf
+    Info (12023): Found entity 1: alt_u_div_a4f File: C:/Users/danie/Disciplinas/2semestre/LSD/TesteCrl/Teste/db/alt_u_div_a4f.tdf Line: 27
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 242 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 225 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4815 megabytes
+    Info: Processing ended: Fri May 13 10:21:23 2022
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
+
+

@@ -1,0 +1,80 @@
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity Set is
+	port(clk     : in  std_logic;
+		  Game1   : in  std_logic;
+		  Game2   : in  std_logic;
+		  dOut1   : out std_logic_vector(1 downto 0);
+		  dOut2   : out std_logic_vector(1 downto 0);
+		  Match1  : out std_logic;
+		  Match2  : out std_logic);
+end Set;
+
+architecture Behav of Set is
+	type state is (S,TB);
+	signal PS, NS : state;
+	signal s_c1, s_c2: unsigned(2 downto 0);
+begin
+
+	sync_proc: process(clk)
+	begin
+		if (rising_edge(clk)) then
+			PS <= NS;
+		end if;
+	end process;
+	
+	-- temos de criar um processo receber resultado do jogo Game1 e Game2
+	
+	comb_proc: process(PS, Game1, Game2,s_c1,s_c2)
+	begin
+		NS <= PS;
+		
+		case PS is
+		when S => 
+			if (Game1 = '1') then
+				if (s_c1 = "101" and s_c2 /= "101") then
+					s_c1 <= "000";
+					s_c2 <= "000";
+					NS <= S;
+					Match1 <= '1';
+				else
+					s_c1 <= s_c1 + 1;
+				end if;
+			elsif (Game2 = '1') then
+				if (s_c2 = "101" and s_c1 /= "101") then
+					s_c1 <= "000";
+					s_c2 <= "000";
+					NS <= S;
+					Match2 <= '1';
+				else
+					s_c2 <= s_c2 + 1;
+				end if;
+			end if;
+			
+			NS <= S;
+			if (s_c1 ="101" and s_c2 = "101") then
+				NS <= TB;
+			end if;
+			
+		when TB =>
+			if (Game1 = '1') then
+				s_c1 <= "000";
+				s_c2 <= "000";
+				NS <= S;
+				Match1 <= '1';
+			elsif(Game2 = '1') then
+				s_c1 <= "000";
+					s_c2 <= "000";
+					NS <= S;
+					Match2 <= '1';
+			end if;
+			
+		end case;
+		dOut1 <= std_logic_vector(s_c1);
+		dOut2 <= std_logic_vector(s_c2);
+	end process;
+	
+end Behav;

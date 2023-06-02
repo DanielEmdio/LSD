@@ -1,0 +1,889 @@
+Analysis & Synthesis report for Tenis_Demo
+Tue Jan 03 15:18:30 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Tenis_Demo|Game:Game|PS
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: DebounceUnit:DU1
+ 15. Parameter Settings for User Entity Instance: DebounceUnit:DU
+ 16. Parameter Settings for User Entity Instance: DebounceUnit:DU2
+ 17. Parameter Settings for User Entity Instance: PulseGeneratorLed:pgl
+ 18. Parameter Settings for User Entity Instance: PulseGeneratorCounter:puls
+ 19. Parameter Settings for Inferred Entity Instance: HexGameExp:hge|lpm_divide:Mod0
+ 20. Parameter Settings for Inferred Entity Instance: HexGameExp:hge|lpm_divide:Div0
+ 21. Parameter Settings for Inferred Entity Instance: HexGame:Hex420|lpm_divide:Mod0
+ 22. Parameter Settings for Inferred Entity Instance: HexGame:Hex420|lpm_divide:Div0
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Jan 03 15:18:30 2023       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; Tenis_Demo                                  ;
+; Top-level Entity Name              ; Tenis_Demo                                  ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 939                                         ;
+;     Total combinational functions  ; 934                                         ;
+;     Dedicated logic registers      ; 206                                         ;
+; Total registers                    ; 206                                         ;
+; Total pins                         ; 87                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; Tenis_Demo         ; Tenis_Demo         ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; All                ;                    ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+---------+
+; Game.vhd                         ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd                      ;         ;
+; Set.vhd                          ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Set.vhd                       ;         ;
+; HexGames.vhd                     ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd                  ;         ;
+; Tenis_Demo.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Tenis_Demo.bdf                ;         ;
+; Match.vhd                        ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Match.vhd                     ;         ;
+; Buff.vhd                         ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff.vhd                      ;         ;
+; DebounceUnit.vhd                 ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/DebounceUnit.vhd              ;         ;
+; DPoint.vhd                       ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/DPoint.vhd                    ;         ;
+; output_files/Sum.vhd             ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Sum.vhd          ;         ;
+; PulseGeneratorLed.vhd            ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/PulseGeneratorLed.vhd         ;         ;
+; Buff1bit.vhd                     ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff1bit.vhd                  ;         ;
+; Buff2.vhd                        ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff2.vhd                     ;         ;
+; Buff2led12.vhd                   ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff2led12.vhd                ;         ;
+; Buff3ledTo11.vhd                 ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff3ledTo11.vhd              ;         ;
+; output_files/Buff3ledTo16.vhd    ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Buff3ledTo16.vhd ;         ;
+; HexGamesExp.vhd                  ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd               ;         ;
+; HexSet0.vhd                      ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet0.vhd                   ;         ;
+; HexSet1.vhd                      ; yes             ; User VHDL File                     ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet1.vhd                   ;         ;
+; pulsegeneratorcounter.vhd        ; yes             ; Auto-Found VHDL File               ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/pulsegeneratorcounter.vhd     ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                 ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc            ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                 ;         ;
+; db/lpm_divide_q9m.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/db/lpm_divide_q9m.tdf         ;         ;
+; db/sign_div_unsign_fkh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/db/sign_div_unsign_fkh.tdf    ;         ;
+; db/alt_u_div_i4f.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/db/alt_u_div_i4f.tdf          ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/db/add_sub_7pc.tdf            ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/db/add_sub_8pc.tdf            ;         ;
+; db/lpm_divide_jhm.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/db/lpm_divide_jhm.tdf         ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/db/sign_div_unsign_bkh.tdf    ;         ;
+; db/alt_u_div_a4f.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/db/alt_u_div_a4f.tdf          ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 939            ;
+;                                             ;                ;
+; Total combinational functions               ; 934            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 309            ;
+;     -- 3 input functions                    ; 231            ;
+;     -- <=2 input functions                  ; 394            ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 698            ;
+;     -- arithmetic mode                      ; 236            ;
+;                                             ;                ;
+; Total registers                             ; 206            ;
+;     -- Dedicated logic registers            ; 206            ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 87             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 204            ;
+; Total fan-out                               ; 3429           ;
+; Average fan-out                             ; 2.61           ;
++---------------------------------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                      ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                        ; Entity Name           ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |Tenis_Demo                               ; 934 (0)             ; 206 (0)                   ; 0           ; 0            ; 0       ; 0         ; 87   ; 0            ; |Tenis_Demo                                                                                                                ; Tenis_Demo            ; work         ;
+;    |Buff1bit:buf|                         ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|Buff1bit:buf                                                                                                   ; Buff1bit              ; work         ;
+;    |Buff2:b0|                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|Buff2:b0                                                                                                       ; Buff2                 ; work         ;
+;    |Buff3lebTo16:bu1|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|Buff3lebTo16:bu1                                                                                               ; Buff3lebTo16          ; work         ;
+;    |Buff:buff1|                           ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|Buff:buff1                                                                                                     ; Buff                  ; work         ;
+;    |Buff:buff2|                           ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|Buff:buff2                                                                                                     ; Buff                  ; work         ;
+;    |DPoint:dp|                            ; 23 (23)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|DPoint:dp                                                                                                      ; DPoint                ; work         ;
+;    |DebounceUnit:DU1|                     ; 80 (80)             ; 31 (31)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|DebounceUnit:DU1                                                                                               ; DebounceUnit          ; work         ;
+;    |DebounceUnit:DU2|                     ; 67 (67)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|DebounceUnit:DU2                                                                                               ; DebounceUnit          ; work         ;
+;    |DebounceUnit:DU|                      ; 68 (68)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|DebounceUnit:DU                                                                                                ; DebounceUnit          ; work         ;
+;    |Game:Game|                            ; 111 (111)           ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|Game:Game                                                                                                      ; Game                  ; work         ;
+;    |HexGame:Hex420|                       ; 165 (57)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGame:Hex420                                                                                                 ; HexGame               ; work         ;
+;       |lpm_divide:Div0|                   ; 44 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGame:Hex420|lpm_divide:Div0                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_jhm:auto_generated|  ; 44 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGame:Hex420|lpm_divide:Div0|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm        ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 44 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGame:Hex420|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh   ; work         ;
+;                |alt_u_div_a4f:divider|    ; 44 (44)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGame:Hex420|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f         ; work         ;
+;       |lpm_divide:Mod0|                   ; 64 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGame:Hex420|lpm_divide:Mod0                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_q9m:auto_generated|  ; 64 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGame:Hex420|lpm_divide:Mod0|lpm_divide_q9m:auto_generated                                                   ; lpm_divide_q9m        ; work         ;
+;             |sign_div_unsign_fkh:divider| ; 64 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGame:Hex420|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ; sign_div_unsign_fkh   ; work         ;
+;                |alt_u_div_i4f:divider|    ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGame:Hex420|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ; alt_u_div_i4f         ; work         ;
+;    |HexGameExp:hge|                       ; 168 (60)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGameExp:hge                                                                                                 ; HexGameExp            ; work         ;
+;       |lpm_divide:Div0|                   ; 44 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGameExp:hge|lpm_divide:Div0                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_jhm:auto_generated|  ; 44 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGameExp:hge|lpm_divide:Div0|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm        ; work         ;
+;             |sign_div_unsign_bkh:divider| ; 44 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGameExp:hge|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh   ; work         ;
+;                |alt_u_div_a4f:divider|    ; 44 (44)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGameExp:hge|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f         ; work         ;
+;       |lpm_divide:Mod0|                   ; 64 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGameExp:hge|lpm_divide:Mod0                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_q9m:auto_generated|  ; 64 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGameExp:hge|lpm_divide:Mod0|lpm_divide_q9m:auto_generated                                                   ; lpm_divide_q9m        ; work         ;
+;             |sign_div_unsign_fkh:divider| ; 64 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGameExp:hge|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider                       ; sign_div_unsign_fkh   ; work         ;
+;                |alt_u_div_i4f:divider|    ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexGameExp:hge|lpm_divide:Mod0|lpm_divide_q9m:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_i4f:divider ; alt_u_div_i4f         ; work         ;
+;    |HexSet0:hs0|                          ; 34 (34)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexSet0:hs0                                                                                                    ; HexSet0               ; work         ;
+;    |HexSet1:hs1|                          ; 32 (32)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|HexSet1:hs1                                                                                                    ; HexSet1               ; work         ;
+;    |Match:match|                          ; 12 (12)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|Match:match                                                                                                    ; Match                 ; work         ;
+;    |PulseGeneratorCounter:puls|           ; 47 (47)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|PulseGeneratorCounter:puls                                                                                     ; PulseGeneratorCounter ; work         ;
+;    |PulseGeneratorLed:pgl|                ; 39 (39)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|PulseGeneratorLed:pgl                                                                                          ; PulseGeneratorLed     ; work         ;
+;    |Set:set|                              ; 42 (42)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|Set:set                                                                                                        ; Set                   ; work         ;
+;    |Sum:sum|                              ; 37 (37)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Tenis_Demo|Sum:sum                                                                                                        ; Sum                   ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------+
+; State Machine - |Tenis_Demo|Game:Game|PS ;
++-------+-------+-------+------+-----------+
+; Name  ; PS.A2 ; PS.A1 ; PS.D ; PS.S      ;
++-------+-------+-------+------+-----------+
+; PS.S  ; 0     ; 0     ; 0    ; 0         ;
+; PS.D  ; 0     ; 0     ; 1    ; 1         ;
+; PS.A1 ; 0     ; 1     ; 0    ; 1         ;
+; PS.A2 ; 1     ; 0     ; 0    ; 1         ;
++-------+-------+-------+------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                    ;
++-----------------------------------------------------+-------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal     ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------+------------------------+
+; HexGameExp:hge|digy0[0]                             ; HexGameExp:hge|digy1[1] ; yes                    ;
+; HexGameExp:hge|digy0[1]                             ; HexGameExp:hge|digy1[1] ; yes                    ;
+; HexGameExp:hge|digy0[2]                             ; HexGameExp:hge|digy1[1] ; yes                    ;
+; HexGameExp:hge|digy0[3]                             ; HexGameExp:hge|digy1[1] ; yes                    ;
+; HexGameExp:hge|digy1[0]                             ; HexGameExp:hge|digy1[1] ; yes                    ;
+; HexGameExp:hge|digy1[1]                             ; HexGameExp:hge|digy1[1] ; yes                    ;
+; HexGameExp:hge|digy1[2]                             ; HexGameExp:hge|digy1[1] ; yes                    ;
+; HexGameExp:hge|digy1[3]                             ; HexGameExp:hge|digy1[1] ; yes                    ;
+; HexGame:Hex420|digy0[0]                             ; HexGame:Hex420|digy1[1] ; yes                    ;
+; HexGame:Hex420|digy0[1]                             ; HexGame:Hex420|digy1[1] ; yes                    ;
+; HexGame:Hex420|digy0[2]                             ; HexGame:Hex420|digy1[1] ; yes                    ;
+; HexGame:Hex420|digy0[3]                             ; HexGame:Hex420|digy1[1] ; yes                    ;
+; HexGame:Hex420|digy1[0]                             ; HexGame:Hex420|digy1[1] ; yes                    ;
+; HexGame:Hex420|digy1[1]                             ; HexGame:Hex420|digy1[1] ; yes                    ;
+; HexGame:Hex420|digy1[2]                             ; HexGame:Hex420|digy1[1] ; yes                    ;
+; HexGame:Hex420|digy1[3]                             ; HexGame:Hex420|digy1[1] ; yes                    ;
+; Set:set|set_Pt2                                     ; Set:set|PS              ; yes                    ;
+; Set:set|set_Pt1                                     ; Set:set|PS              ; yes                    ;
+; HexGameExp:hge|bcd[0]                               ; HexGameExp:hge|digy1[1] ; yes                    ;
+; HexGameExp:hge|bcd[1]                               ; HexGameExp:hge|digy1[1] ; yes                    ;
+; HexGameExp:hge|bcd[2]                               ; HexGameExp:hge|digy1[1] ; yes                    ;
+; HexGameExp:hge|bcd[3]                               ; HexGameExp:hge|digy1[1] ; yes                    ;
+; HexGame:Hex420|bcd[0]                               ; HexGame:Hex420|digy1[1] ; yes                    ;
+; HexGame:Hex420|bcd[1]                               ; HexGame:Hex420|digy1[1] ; yes                    ;
+; HexGame:Hex420|bcd[2]                               ; HexGame:Hex420|digy1[1] ; yes                    ;
+; HexGame:Hex420|bcd[3]                               ; HexGame:Hex420|digy1[1] ; yes                    ;
+; Game:Game|NS.A1_556                                 ; Game:Game|Selector1     ; yes                    ;
+; Game:Game|NS.S_600                                  ; Game:Game|Selector1     ; yes                    ;
+; Game:Game|NS.A2_534                                 ; Game:Game|Selector1     ; yes                    ;
+; Game:Game|NS.D_578                                  ; Game:Game|Selector1     ; yes                    ;
+; HexGameExp:hge|bcd[4]                               ; HexGameExp:hge|digy1[1] ; yes                    ;
+; HexGameExp:hge|bcd[5]                               ; HexGameExp:hge|digy1[1] ; yes                    ;
+; HexGameExp:hge|bcd[6]                               ; HexGameExp:hge|digy1[1] ; yes                    ;
+; HexGame:Hex420|bcd[4]                               ; HexGame:Hex420|digy1[1] ; yes                    ;
+; HexGame:Hex420|bcd[5]                               ; HexGame:Hex420|digy1[1] ; yes                    ;
+; HexGame:Hex420|bcd[6]                               ; HexGame:Hex420|digy1[1] ; yes                    ;
+; Number of user-specified and inferred latches = 36  ;                         ;                        ;
++-----------------------------------------------------+-------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++---------------------------------------+---------------------------------------------+
+; Register name                         ; Reason for Removal                          ;
++---------------------------------------+---------------------------------------------+
+; HexSet0:hs0|counter[1]                ; Merged with DPoint:dp|counter[1]            ;
+; HexSet1:hs1|counter[1]                ; Merged with DPoint:dp|counter[1]            ;
+; Sum:sum|counter[1]                    ; Merged with DPoint:dp|counter[1]            ;
+; HexSet0:hs0|counter[0]                ; Merged with DPoint:dp|counter[0]            ;
+; HexSet1:hs1|counter[0]                ; Merged with DPoint:dp|counter[0]            ;
+; Sum:sum|counter[0]                    ; Merged with DPoint:dp|counter[0]            ;
+; Game:Game|j2                          ; Merged with Game:Game|j1                    ;
+; DPoint:dp|decOut_n[0]~_emulated       ; Merged with DPoint:dp|decOut_n[5]~_emulated ;
+; Total Number of Removed Registers = 8 ;                                             ;
++---------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 206   ;
+; Number of registers using Synchronous Clear  ; 40    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 62    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 78    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; Game:Game|j1                           ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Tenis_Demo|Game:Game|Tcounter2[1]             ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Tenis_Demo|Game:Game|Tcounter1[1]             ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |Tenis_Demo|Game:Game|counter2[2]              ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Tenis_Demo|Set:set|counter1[2]                ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Tenis_Demo|Set:set|counter2[2]                ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Tenis_Demo|Game:Game|counter1[1]              ;
+; 5:1                ; 28 bits   ; 84 LEs        ; 56 LEs               ; 28 LEs                 ; Yes        ; |Tenis_Demo|DebounceUnit:DU1|s_debounceCnt[9]  ;
+; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; Yes        ; |Tenis_Demo|DebounceUnit:DU2|s_debounceCnt[13] ;
+; 5:1                ; 23 bits   ; 69 LEs        ; 46 LEs               ; 23 LEs                 ; Yes        ; |Tenis_Demo|DebounceUnit:DU|s_debounceCnt[18]  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Tenis_Demo|HexGame:Hex420|decOut_0[3]         ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Tenis_Demo|HexGame:Hex420|decOut_0[1]         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Tenis_Demo|DPoint:dp|decOut_n                 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Tenis_Demo|HexGameExp:hge|decOut_0[3]         ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Tenis_Demo|HexGameExp:hge|decOut_1[2]         ;
+; 10:1               ; 6 bits    ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; No         ; |Tenis_Demo|HexGame:Hex420|decOut_1[0]         ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; No         ; |Tenis_Demo|HexGameExp:hge|decOut_1[5]         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DebounceUnit:DU1 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                       ;
+; msecmininwidth ; 3000  ; Signed Integer                       ;
+; inpolarity     ; '0'   ; Enumerated                           ;
+; outpolarity    ; '1'   ; Enumerated                           ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DebounceUnit:DU ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                      ;
+; msecmininwidth ; 100   ; Signed Integer                      ;
+; inpolarity     ; '0'   ; Enumerated                          ;
+; outpolarity    ; '1'   ; Enumerated                          ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DebounceUnit:DU2 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; khzclkfreq     ; 50000 ; Signed Integer                       ;
+; msecmininwidth ; 100   ; Signed Integer                       ;
+; inpolarity     ; '0'   ; Enumerated                           ;
+; outpolarity    ; '1'   ; Enumerated                           ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PulseGeneratorLed:pgl ;
++----------------+----------+----------------------------------------+
+; Parameter Name ; Value    ; Type                                   ;
++----------------+----------+----------------------------------------+
+; number_steps   ; 25000000 ; Signed Integer                         ;
++----------------+----------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PulseGeneratorCounter:puls ;
++----------------+----------+---------------------------------------------+
+; Parameter Name ; Value    ; Type                                        ;
++----------------+----------+---------------------------------------------+
+; max            ; 50000000 ; Signed Integer                              ;
++----------------+----------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: HexGameExp:hge|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                               ;
+; LPM_WIDTHD             ; 8              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_q9m ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: HexGameExp:hge|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: HexGame:Hex420|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                               ;
+; LPM_WIDTHD             ; 8              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_q9m ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: HexGame:Hex420|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 87                          ;
+; cycloneiii_ff         ; 206                         ;
+;     CLR               ; 40                          ;
+;     ENA               ; 56                          ;
+;     ENA CLR           ; 8                           ;
+;     ENA CLR SCLR      ; 14                          ;
+;     SCLR              ; 26                          ;
+;     plain             ; 62                          ;
+; cycloneiii_lcell_comb ; 935                         ;
+;     arith             ; 236                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 146                         ;
+;         3 data inputs ; 86                          ;
+;     normal            ; 699                         ;
+;         0 data inputs ; 16                          ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 217                         ;
+;         3 data inputs ; 145                         ;
+;         4 data inputs ; 309                         ;
+;                       ;                             ;
+; Max LUT depth         ; 11.20                       ;
+; Average LUT depth     ; 5.59                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Jan 03 15:18:20 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Tenis_Demo -c Tenis_Demo
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file game.vhd
+    Info (12022): Found design unit 1: Game-Behav File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 23
+    Info (12023): Found entity 1: Game File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file set.vhd
+    Info (12022): Found design unit 1: Set-Behav File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Set.vhd Line: 21
+    Info (12023): Found entity 1: Set File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Set.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hexgames.vhd
+    Info (12022): Found design unit 1: HexGame-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 14
+    Info (12023): Found entity 1: HexGame File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file tenis_demo.bdf
+    Info (12023): Found entity 1: Tenis_Demo
+Info (12021): Found 2 design units, including 1 entities, in source file match.vhd
+    Info (12022): Found design unit 1: Match-Set File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Match.vhd Line: 19
+    Info (12023): Found entity 1: Match File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Match.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file buff.vhd
+    Info (12022): Found design unit 1: Buff-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff.vhd Line: 11
+    Info (12023): Found entity 1: Buff File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hexset.vhd
+    Info (12022): Found design unit 1: HexSet-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet.vhd Line: 11
+    Info (12023): Found entity 1: HexSet File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file debounceunit.vhd
+    Info (12022): Found design unit 1: DebounceUnit-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/DebounceUnit.vhd Line: 16
+    Info (12023): Found entity 1: DebounceUnit File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/DebounceUnit.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file dpoint.vhd
+    Info (12022): Found design unit 1: DPoint-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/DPoint.vhd Line: 15
+    Info (12023): Found entity 1: DPoint File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/DPoint.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file output_files/sum.vhd
+    Info (12022): Found design unit 1: Sum-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Sum.vhd Line: 15
+    Info (12023): Found entity 1: Sum File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Sum.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hexsetexp.vhd
+    Info (12022): Found design unit 1: HexSetExp-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSetExp.vhd Line: 11
+    Info (12023): Found entity 1: HexSetExp File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSetExp.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file pulsegeneratorled.vhd
+    Info (12022): Found design unit 1: PulseGeneratorLed-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/PulseGeneratorLed.vhd Line: 11
+    Info (12023): Found entity 1: PulseGeneratorLed File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/PulseGeneratorLed.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file buff1bit.vhd
+    Info (12022): Found design unit 1: Buff1bit-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff1bit.vhd Line: 11
+    Info (12023): Found entity 1: Buff1bit File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff1bit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file buff2.vhd
+    Info (12022): Found design unit 1: Buff2-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff2.vhd Line: 11
+    Info (12023): Found entity 1: Buff2 File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff2.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file buff2led12.vhd
+    Info (12022): Found design unit 1: Buff2led12-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff2led12.vhd Line: 11
+    Info (12023): Found entity 1: Buff2led12 File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff2led12.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file buff3ledto11.vhd
+    Info (12022): Found design unit 1: Buff3lebTo11-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff3ledTo11.vhd Line: 11
+    Info (12023): Found entity 1: Buff3lebTo11 File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff3ledTo11.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file output_files/buff3ledto16.vhd
+    Info (12022): Found design unit 1: Buff3lebTo16-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Buff3ledTo16.vhd Line: 11
+    Info (12023): Found entity 1: Buff3lebTo16 File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Buff3ledTo16.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file hexgamesexp.vhd
+    Info (12022): Found design unit 1: HexGameExp-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 15
+    Info (12023): Found entity 1: HexGameExp File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hexset0.vhd
+    Info (12022): Found design unit 1: HexSet0-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet0.vhd Line: 14
+    Info (12023): Found entity 1: HexSet0 File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet0.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file hexset1.vhd
+    Info (12022): Found design unit 1: HexSet1-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet1.vhd Line: 14
+    Info (12023): Found entity 1: HexSet1 File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file game_tb.vhd
+    Info (12022): Found design unit 1: Game_Tb-Simulation File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game_Tb.vhd Line: 7
+    Info (12023): Found entity 1: Game_Tb File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game_Tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file set_tb.vhd
+    Info (12022): Found design unit 1: Set_Tb-Simulation File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Set_Tb.vhd Line: 7
+    Info (12023): Found entity 1: Set_Tb File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Set_Tb.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file match_tb.vhd
+    Info (12022): Found design unit 1: Match_Tb-Simulation File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Match_Tb.vhd Line: 7
+    Info (12023): Found entity 1: Match_Tb File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Match_Tb.vhd Line: 4
+Info (12127): Elaborating entity "Tenis_Demo" for the top level hierarchy
+Info (12128): Elaborating entity "HexSet0" for hierarchy "HexSet0:hs0"
+Warning (10492): VHDL Process Statement warning at HexSet0.vhd(30): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet0.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at HexSet0.vhd(31): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet0.vhd Line: 31
+Info (12128): Elaborating entity "Match" for hierarchy "Match:match"
+Warning (10492): VHDL Process Statement warning at Match.vhd(53): signal "set_Pt1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Match.vhd Line: 53
+Warning (10492): VHDL Process Statement warning at Match.vhd(55): signal "set_Pt2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Match.vhd Line: 55
+Info (12128): Elaborating entity "Set" for hierarchy "Set:set"
+Warning (10631): VHDL Process Statement warning at Set.vhd(60): inferring latch(es) for signal or variable "set_Pt1", which holds its previous value in one or more paths through the process File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Set.vhd Line: 60
+Warning (10631): VHDL Process Statement warning at Set.vhd(60): inferring latch(es) for signal or variable "set_Pt2", which holds its previous value in one or more paths through the process File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Set.vhd Line: 60
+Info (10041): Inferred latch for "set_Pt2" at Set.vhd(60) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Set.vhd Line: 60
+Info (10041): Inferred latch for "set_Pt1" at Set.vhd(60) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Set.vhd Line: 60
+Info (12128): Elaborating entity "DebounceUnit" for hierarchy "DebounceUnit:DU1"
+Info (12128): Elaborating entity "Game" for hierarchy "Game:Game"
+Warning (10492): VHDL Process Statement warning at Game.vhd(84): signal "tb" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 84
+Warning (10492): VHDL Process Statement warning at Game.vhd(85): signal "Tcounter1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 85
+Warning (10492): VHDL Process Statement warning at Game.vhd(88): signal "Tcounter1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at Game.vhd(88): signal "Tcounter2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at Game.vhd(91): signal "Tcounter2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 91
+Warning (10492): VHDL Process Statement warning at Game.vhd(94): signal "Tcounter2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at Game.vhd(94): signal "Tcounter1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 94
+Warning (10631): VHDL Process Statement warning at Game.vhd(76): inferring latch(es) for signal or variable "NS", which holds its previous value in one or more paths through the process File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at Game.vhd(175): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 175
+Info (10041): Inferred latch for "NS.A2" at Game.vhd(76) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 76
+Info (10041): Inferred latch for "NS.A1" at Game.vhd(76) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 76
+Info (10041): Inferred latch for "NS.D" at Game.vhd(76) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 76
+Info (10041): Inferred latch for "NS.S" at Game.vhd(76) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 76
+Info (12128): Elaborating entity "DebounceUnit" for hierarchy "DebounceUnit:DU"
+Info (12128): Elaborating entity "PulseGeneratorLed" for hierarchy "PulseGeneratorLed:pgl"
+Warning (12125): Using design file pulsegeneratorcounter.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: PulseGeneratorCounter-Behavioral File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/pulsegeneratorcounter.vhd Line: 11
+    Info (12023): Found entity 1: PulseGeneratorCounter File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/pulsegeneratorcounter.vhd Line: 5
+Info (12128): Elaborating entity "PulseGeneratorCounter" for hierarchy "PulseGeneratorCounter:puls"
+Info (12128): Elaborating entity "HexSet1" for hierarchy "HexSet1:hs1"
+Warning (10492): VHDL Process Statement warning at HexSet1.vhd(30): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet1.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at HexSet1.vhd(31): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet1.vhd Line: 31
+Info (12128): Elaborating entity "DPoint" for hierarchy "DPoint:dp"
+Warning (10492): VHDL Process Statement warning at DPoint.vhd(30): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/DPoint.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at DPoint.vhd(31): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/DPoint.vhd Line: 31
+Warning (10492): VHDL Process Statement warning at DPoint.vhd(44): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/DPoint.vhd Line: 44
+Info (12128): Elaborating entity "Sum" for hierarchy "Sum:sum"
+Warning (10492): VHDL Process Statement warning at Sum.vhd(36): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Sum.vhd Line: 36
+Warning (10492): VHDL Process Statement warning at Sum.vhd(37): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Sum.vhd Line: 37
+Info (12128): Elaborating entity "HexGameExp" for hierarchy "HexGameExp:hge"
+Warning (10492): VHDL Process Statement warning at HexGamesExp.vhd(21): signal "win1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 21
+Warning (10492): VHDL Process Statement warning at HexGamesExp.vhd(24): signal "win2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 24
+Warning (10492): VHDL Process Statement warning at HexGamesExp.vhd(29): signal "bcd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at HexGamesExp.vhd(30): signal "bcd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at HexGamesExp.vhd(31): signal "digy1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 31
+Warning (10492): VHDL Process Statement warning at HexGamesExp.vhd(43): signal "digy0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 43
+Warning (10631): VHDL Process Statement warning at HexGamesExp.vhd(19): inferring latch(es) for signal or variable "bcd", which holds its previous value in one or more paths through the process File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at HexGamesExp.vhd(19): inferring latch(es) for signal or variable "digy0", which holds its previous value in one or more paths through the process File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Warning (10631): VHDL Process Statement warning at HexGamesExp.vhd(19): inferring latch(es) for signal or variable "digy1", which holds its previous value in one or more paths through the process File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (10041): Inferred latch for "digy1[0]" at HexGamesExp.vhd(19) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (10041): Inferred latch for "digy1[1]" at HexGamesExp.vhd(19) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (10041): Inferred latch for "digy1[2]" at HexGamesExp.vhd(19) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (10041): Inferred latch for "digy1[3]" at HexGamesExp.vhd(19) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (10041): Inferred latch for "digy0[0]" at HexGamesExp.vhd(19) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (10041): Inferred latch for "digy0[1]" at HexGamesExp.vhd(19) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (10041): Inferred latch for "digy0[2]" at HexGamesExp.vhd(19) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (10041): Inferred latch for "digy0[3]" at HexGamesExp.vhd(19) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (10041): Inferred latch for "bcd[0]" at HexGamesExp.vhd(19) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (10041): Inferred latch for "bcd[1]" at HexGamesExp.vhd(19) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (10041): Inferred latch for "bcd[2]" at HexGamesExp.vhd(19) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (10041): Inferred latch for "bcd[3]" at HexGamesExp.vhd(19) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (10041): Inferred latch for "bcd[4]" at HexGamesExp.vhd(19) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (10041): Inferred latch for "bcd[5]" at HexGamesExp.vhd(19) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (10041): Inferred latch for "bcd[6]" at HexGamesExp.vhd(19) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (10041): Inferred latch for "bcd[7]" at HexGamesExp.vhd(19) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 19
+Info (12128): Elaborating entity "HexGame" for hierarchy "HexGame:Hex420"
+Warning (10492): VHDL Process Statement warning at HexGames.vhd(20): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 20
+Warning (10492): VHDL Process Statement warning at HexGames.vhd(25): signal "bcd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at HexGames.vhd(26): signal "bcd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 26
+Warning (10492): VHDL Process Statement warning at HexGames.vhd(27): signal "digy1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at HexGames.vhd(40): signal "digy0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 40
+Warning (10631): VHDL Process Statement warning at HexGames.vhd(18): inferring latch(es) for signal or variable "bcd", which holds its previous value in one or more paths through the process File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Warning (10631): VHDL Process Statement warning at HexGames.vhd(18): inferring latch(es) for signal or variable "digy0", which holds its previous value in one or more paths through the process File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Warning (10631): VHDL Process Statement warning at HexGames.vhd(18): inferring latch(es) for signal or variable "digy1", which holds its previous value in one or more paths through the process File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (10041): Inferred latch for "digy1[0]" at HexGames.vhd(18) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (10041): Inferred latch for "digy1[1]" at HexGames.vhd(18) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (10041): Inferred latch for "digy1[2]" at HexGames.vhd(18) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (10041): Inferred latch for "digy1[3]" at HexGames.vhd(18) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (10041): Inferred latch for "digy0[0]" at HexGames.vhd(18) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (10041): Inferred latch for "digy0[1]" at HexGames.vhd(18) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (10041): Inferred latch for "digy0[2]" at HexGames.vhd(18) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (10041): Inferred latch for "digy0[3]" at HexGames.vhd(18) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (10041): Inferred latch for "bcd[0]" at HexGames.vhd(18) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (10041): Inferred latch for "bcd[1]" at HexGames.vhd(18) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (10041): Inferred latch for "bcd[2]" at HexGames.vhd(18) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (10041): Inferred latch for "bcd[3]" at HexGames.vhd(18) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (10041): Inferred latch for "bcd[4]" at HexGames.vhd(18) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (10041): Inferred latch for "bcd[5]" at HexGames.vhd(18) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (10041): Inferred latch for "bcd[6]" at HexGames.vhd(18) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (10041): Inferred latch for "bcd[7]" at HexGames.vhd(18) File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 18
+Info (12128): Elaborating entity "Buff" for hierarchy "Buff:buff2"
+Warning (10492): VHDL Process Statement warning at Buff.vhd(15): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff.vhd Line: 15
+Warning (10492): VHDL Process Statement warning at Buff.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff.vhd Line: 16
+Info (12128): Elaborating entity "Buff1bit" for hierarchy "Buff1bit:buf"
+Warning (10492): VHDL Process Statement warning at Buff1bit.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff1bit.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at Buff1bit.vhd(17): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff1bit.vhd Line: 17
+Info (12128): Elaborating entity "Buff2led12" for hierarchy "Buff2led12:b1"
+Warning (10492): VHDL Process Statement warning at Buff2led12.vhd(15): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff2led12.vhd Line: 15
+Warning (10492): VHDL Process Statement warning at Buff2led12.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff2led12.vhd Line: 16
+Info (12128): Elaborating entity "Buff3lebTo16" for hierarchy "Buff3lebTo16:bu1"
+Warning (10492): VHDL Process Statement warning at Buff3ledTo16.vhd(15): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Buff3ledTo16.vhd Line: 15
+Warning (10492): VHDL Process Statement warning at Buff3ledTo16.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Buff3ledTo16.vhd Line: 16
+Info (12128): Elaborating entity "Buff3lebTo11" for hierarchy "Buff3lebTo11:bu0"
+Warning (10492): VHDL Process Statement warning at Buff3ledTo11.vhd(15): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff3ledTo11.vhd Line: 15
+Warning (10492): VHDL Process Statement warning at Buff3ledTo11.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff3ledTo11.vhd Line: 16
+Info (12128): Elaborating entity "Buff2" for hierarchy "Buff2:b0"
+Warning (10492): VHDL Process Statement warning at Buff2.vhd(15): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff2.vhd Line: 15
+Warning (10492): VHDL Process Statement warning at Buff2.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Buff2.vhd Line: 16
+Info (278001): Inferred 4 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "HexGameExp:hge|Mod0" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 29
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "HexGameExp:hge|Div0" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 30
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "HexGame:Hex420|Mod0" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 25
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "HexGame:Hex420|Div0" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGames.vhd Line: 26
+Info (12130): Elaborated megafunction instantiation "HexGameExp:hge|lpm_divide:Mod0" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 29
+Info (12133): Instantiated megafunction "HexGameExp:hge|lpm_divide:Mod0" with the following parameter: File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 29
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "8"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_q9m.tdf
+    Info (12023): Found entity 1: lpm_divide_q9m File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/db/lpm_divide_q9m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_fkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_fkh File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/db/sign_div_unsign_fkh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_i4f.tdf
+    Info (12023): Found entity 1: alt_u_div_i4f File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/db/alt_u_div_i4f.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "HexGameExp:hge|lpm_divide:Div0" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 30
+Info (12133): Instantiated megafunction "HexGameExp:hge|lpm_divide:Div0" with the following parameter: File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexGamesExp.vhd Line: 30
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_jhm.tdf
+    Info (12023): Found entity 1: lpm_divide_jhm File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/db/lpm_divide_jhm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bkh File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/db/sign_div_unsign_bkh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a4f.tdf
+    Info (12023): Found entity 1: alt_u_div_a4f File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/db/alt_u_div_a4f.tdf Line: 27
+Warning (13012): Latch Game:Game|NS.A1_556 has unsafe behavior File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 76
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Game:Game|counter1[2] File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 34
+Warning (13012): Latch Game:Game|NS.S_600 has unsafe behavior File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 76
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Game:Game|PS.S File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 25
+Warning (13012): Latch Game:Game|NS.A2_534 has unsafe behavior File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 76
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Game:Game|counter2[2] File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 34
+Warning (13012): Latch Game:Game|NS.D_578 has unsafe behavior File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 76
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Game:Game|PS.S File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 25
+Info (13000): Registers with preset signals will power-up high File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/Game.vhd Line: 172
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "HexSet0:hs0|decOut[6]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[6]~_emulated" and latch "HexSet0:hs0|decOut[6]~1" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet0.vhd Line: 31
+    Warning (13310): Register "HexSet0:hs0|decOut[5]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[5]~_emulated" and latch "HexSet0:hs0|decOut[5]~6" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet0.vhd Line: 31
+    Warning (13310): Register "HexSet0:hs0|decOut[4]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[4]~_emulated" and latch "HexSet0:hs0|decOut[4]~11" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet0.vhd Line: 31
+    Warning (13310): Register "HexSet0:hs0|decOut[3]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[3]~_emulated" and latch "HexSet0:hs0|decOut[3]~16" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet0.vhd Line: 31
+    Warning (13310): Register "HexSet0:hs0|decOut[2]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[2]~_emulated" and latch "HexSet0:hs0|decOut[2]~21" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet0.vhd Line: 31
+    Warning (13310): Register "HexSet0:hs0|decOut[1]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[1]~_emulated" and latch "HexSet0:hs0|decOut[1]~26" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet0.vhd Line: 31
+    Warning (13310): Register "HexSet0:hs0|decOut[0]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[0]~_emulated" and latch "HexSet0:hs0|decOut[3]~16" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet0.vhd Line: 31
+    Warning (13310): Register "HexSet1:hs1|decOut[6]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[6]~_emulated" and latch "HexSet1:hs1|decOut[6]~1" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet1.vhd Line: 31
+    Warning (13310): Register "HexSet1:hs1|decOut[5]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[5]~_emulated" and latch "HexSet1:hs1|decOut[5]~6" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet1.vhd Line: 31
+    Warning (13310): Register "HexSet1:hs1|decOut[4]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[4]~_emulated" and latch "HexSet1:hs1|decOut[4]~11" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet1.vhd Line: 31
+    Warning (13310): Register "HexSet1:hs1|decOut[3]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[3]~_emulated" and latch "HexSet1:hs1|decOut[3]~16" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet1.vhd Line: 31
+    Warning (13310): Register "HexSet1:hs1|decOut[2]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[2]~_emulated" and latch "HexSet1:hs1|decOut[2]~21" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet1.vhd Line: 31
+    Warning (13310): Register "HexSet1:hs1|decOut[1]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[1]~_emulated" and latch "HexSet1:hs1|decOut[1]~26" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet1.vhd Line: 31
+    Warning (13310): Register "HexSet1:hs1|decOut[0]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[0]~_emulated" and latch "HexSet1:hs1|decOut[3]~16" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/HexSet1.vhd Line: 31
+    Warning (13310): Register "DPoint:dp|decOut_n[6]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[6]~_emulated" and latch "DPoint:dp|decOut_n[6]~1" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/DPoint.vhd Line: 31
+    Warning (13310): Register "DPoint:dp|decOut_n[5]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[5]~_emulated" and latch "DPoint:dp|decOut_n[5]~6" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/DPoint.vhd Line: 31
+    Warning (13310): Register "DPoint:dp|decOut_n[4]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[4]~_emulated" and latch "DPoint:dp|decOut_n[4]~11" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/DPoint.vhd Line: 31
+    Warning (13310): Register "DPoint:dp|decOut_n[3]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[3]~_emulated" and latch "DPoint:dp|decOut_n[6]~1" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/DPoint.vhd Line: 31
+    Warning (13310): Register "DPoint:dp|decOut_n[2]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[2]~_emulated" and latch "DPoint:dp|decOut_n[5]~6" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/DPoint.vhd Line: 31
+    Warning (13310): Register "DPoint:dp|decOut_n[1]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[1]~_emulated" and latch "DPoint:dp|decOut_n[4]~11" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/DPoint.vhd Line: 31
+    Warning (13310): Register "DPoint:dp|decOut_n[0]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[0]~_emulated" and latch "DPoint:dp|decOut_n[5]~6" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/DPoint.vhd Line: 31
+    Warning (13310): Register "Sum:sum|decOut[6]" is converted into an equivalent circuit using register "Sum:sum|decOut[6]~_emulated" and latch "Sum:sum|decOut[6]~1" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Sum.vhd Line: 37
+    Warning (13310): Register "Sum:sum|decOut[5]" is converted into an equivalent circuit using register "Sum:sum|decOut[5]~_emulated" and latch "Sum:sum|decOut[5]~6" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Sum.vhd Line: 37
+    Warning (13310): Register "Sum:sum|decOut[4]" is converted into an equivalent circuit using register "Sum:sum|decOut[4]~_emulated" and latch "Sum:sum|decOut[4]~11" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Sum.vhd Line: 37
+    Warning (13310): Register "Sum:sum|decOut[3]" is converted into an equivalent circuit using register "Sum:sum|decOut[3]~_emulated" and latch "Sum:sum|decOut[3]~16" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Sum.vhd Line: 37
+    Warning (13310): Register "Sum:sum|decOut[2]" is converted into an equivalent circuit using register "Sum:sum|decOut[2]~_emulated" and latch "Sum:sum|decOut[2]~21" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Sum.vhd Line: 37
+    Warning (13310): Register "Sum:sum|decOut[1]" is converted into an equivalent circuit using register "Sum:sum|decOut[1]~_emulated" and latch "Sum:sum|decOut[1]~26" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Sum.vhd Line: 37
+    Warning (13310): Register "Sum:sum|decOut[0]" is converted into an equivalent circuit using register "Sum:sum|decOut[0]~_emulated" and latch "Sum:sum|decOut[0]~31" File: C:/Users/danie/Disciplinas/1Ano/2semestre/LSD/FinalProj/output_files/Sum.vhd Line: 37
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[2]"
+Info (21057): Implemented 1034 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 82 output pins
+    Info (21061): Implemented 947 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 91 warnings
+    Info: Peak virtual memory: 4817 megabytes
+    Info: Processing ended: Tue Jan 03 15:18:30 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:18
+
+

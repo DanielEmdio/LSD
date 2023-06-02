@@ -1,0 +1,19 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity HexGame is
+	port(binInput : in  std_logic_vector(1 downto 0);
+		  decOut_0 : out std_logic_vector(6 downto 0);
+		  decOut_1 : out std_logic_vector(6 downto 0));
+end HexGame;
+
+architecture Behavioral of HexGame is
+begin
+		decOut_1 <= "1000000" and decOut_0 <= "1000000" when (binInput = "000") else --00
+		decOut_1 <= "1111001" and decOut_0 <= "0010010" when (binInput = "001") else --15
+		decOut_1 <= "0110000" and decOut_0 <= "1000000" when (binInput = "010") else --30
+		decOut_1 <= "0011001" and decOut_0 <= "1000000" when (binInput = "011") else --40
+		decOut_1 <= "1111111" and decOut_0 <= "0100001" when (binInput = "100") else --d
+		decOut_1 <= "1111111" and decOut_0 <= "0001000" when (binInput = "101") else --A
+		
+end Behavioral; 

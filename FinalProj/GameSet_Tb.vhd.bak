@@ -1,0 +1,75 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity GameSet_Tb is
+end GameSet_Tb;
+
+architecture Simulation of GameSet_Tb is
+	signal s_clk, s_reset, s_dIn1, s_dIn2, s_enable: std_logic;
+	
+	signal s_Match1, s_Match2,s_gamePt: std_logic;
+	signal s_set_Pt: std_logic_vector(0 downto 0);
+	signal s_key,s_dOut1, s_dOut2 : std_logic_vector(2 downto 0);
+	signal s_set : std_logic_vector(1 downto 0);
+	signal s_hex7,s_hex6,s_hex5,s_hex4,s_hex1,s_hex0 : std_logic_vector(6 downto 0);
+begin
+	uut: entity work.GameSetTest(Behav)
+		  port map(CLOCK_50 => s_clk,
+					  KEY      => s_key,
+					  LEDR     => s_set_Pt,
+					  LEDG     => s_set,  
+					  HEX0     => s_hex0,
+					  HEX1     => s_hex1,
+					  HEX4     => s_hex4,
+					  HEX5     => s_hex5,
+					  HEX6     => s_hex6,
+					  HEX7     => s_hex7);
+	
+	s_reset  <= s_key(1);
+	s_dIn1 <= s_key(0);
+	s_key(2) <= '0';
+	s_dIn2 <= s_key(3);
+	clk_proc: process
+	begin
+		s_clk <= '0'; wait for 100 ns;
+		s_clk <= '1'; wait for 100 ns;		--rising_edge nos 100 ns, 300 ns, 500 ns...
+	end process;
+	
+	stim_proc: process
+	begin
+		s_reset  <= '1';
+		s_enable <= '1';
+		s_dIn1  <= '0';
+		s_dIn2  <= '0';
+		wait for 110 ns;		
+		
+		s_reset <= '0';
+		wait for 15 ns;		--125ns
+		
+		
+		s_dIn1 <= '1';
+		wait for 725 ns;		-- 1075 ns
+		
+		s_dIn1 <= '0';
+		wait for 200 ns;		--1275 ns
+		
+		s_dIn2 <= '1';
+		wait for 850 ns;		-- 2125 ns
+		
+		s_dIn2 <= '0';
+		wait for 200 ns;		-- 2325 ns
+		
+		s_dIn1 <= '1';
+		s_dIn2 <= '0';
+		wait for 525 ns;		-- 2850 ns
+		
+		s_dIn1 <= '0';
+		s_dIn2 <= '1';
+		wait for 1025 ns;  --3875 ns
+		
+		s_dIn1 <= '0';
+		s_dIn2 <= '0';
+		wait for 25 ns;
+	
+	end process;
+end Simulation;

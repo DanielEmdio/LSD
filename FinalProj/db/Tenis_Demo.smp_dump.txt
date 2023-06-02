@@ -1,0 +1,7 @@
+
+State Machine - |Tenis_Demo|Game:Game|PS
+Name PS.A2 PS.A1 PS.D PS.S 
+PS.S 0 0 0 0 
+PS.D 0 0 1 1 
+PS.A1 0 1 0 1 
+PS.A2 1 0 0 1 

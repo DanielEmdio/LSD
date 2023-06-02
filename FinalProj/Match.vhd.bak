@@ -1,0 +1,37 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity Match is
+	port(set1    : in  std_logic;
+		  set2    : in  std_logic;
+		  enable  : in  std_logic;
+		  dOut1   : out std_logic_vector(2 downto 0);
+		  dOut2   : out std_logic_vector(2 downto 0));
+end Match;
+
+architecture Set of Match is
+	signal s_set1, s_set2 : unsigned(2 downto 0);
+begin
+	process(set1, set2)
+	begin
+		if (enable = '1') then
+			if (set1 = '1') then
+				if (s_set1 = "010") then
+					s_set1 <= s_set1 + 10;
+				else 
+					s_set1 <= s_set1 + 1;
+				end if;
+			
+			elsif (set2 = '1') then
+				if (s_set2 = "010") then
+					s_set2 <= s_set2 + 10;
+				else 
+					s_set2 <= s_set2 + 1;
+				end if;
+			end if;
+		end if;
+	end process;
+	dOut1 <= std_logic_vector(s_set1);
+	dOut2 <= std_logic_vector(s_set2);	
+end Set;
